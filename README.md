@@ -1,2 +1,1 @@
-# Collaborative-Dual-Elevator-System-STM32
-Distributed dual-elevator control system using STM32 Cortex-M4 MCUs with Full-Duplex SPI IPC, FSM-based control, interrupt-driven scheduling, and real-time task allocation.
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/wgyqY83G)

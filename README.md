@@ -5,7 +5,7 @@
 
 ---
 
-## 🤔 What does it do?
+##  What does it do?
 
 Two physical STM32 boards talk to each other over SPI to run a smart elevator system:
 
@@ -38,9 +38,9 @@ IDLE ──► MOVING_UP / MOVING_DOWN ──► DOORS_OPEN ──► IDLE
 ```
 
 Motor speed is simulated with a **PWM LED**:
-- 🔴 0% duty = stopped
-- 🟡 20% duty = slow
-- 🟢 100% duty = full speed
+-  0% duty = stopped
+-  20% duty = slow
+-  100% duty = full speed
 
 ---
 
@@ -69,12 +69,12 @@ When a hallway button is pressed, the Master picks which elevator to send using 
 
 | Priority | Condition | Action |
 |----------|-----------|--------|
-| 🔴 0 | SPI comm fault | Master handles everything alone |
-| 🥇 1 | Elevator already at that floor and idle | Assign immediately |
-| 🥈 2 | Elevator moving toward floor, same direction | Assign — it'll stop on the way |
-| 🥉 3 | Elevator passed the floor, same direction | Assign only if nothing better |
-| ⛔ 4 | Elevator moving away | Skip — don't assign |
-| 🔵 5 | Both idle | Assign to nearest by floor distance |
+|  0 | SPI comm fault | Master handles everything alone |
+|  1 | Elevator already at that floor and idle | Assign immediately |
+|  2 | Elevator moving toward floor, same direction | Assign — it'll stop on the way |
+|  3 | Elevator passed the floor, same direction | Assign only if nothing better |
+|  4 | Elevator moving away | Skip — don't assign |
+|  5 | Both idle | Assign to nearest by floor distance |
 
 ---
 

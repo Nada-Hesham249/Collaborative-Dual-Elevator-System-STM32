@@ -78,25 +78,3 @@ When a hallway button is pressed, the Master picks which elevator to send using 
 
 ---
 
-## 🗂️ File Structure
-
-```
-├── 📁 Master/
-│   ├── main.c                 # Init + 50ms scheduler tick
-│   ├── fsm_elevator_a.c       # Elevator A state machine
-│   ├── dispatcher.c           # The dispatch algorithm
-│   ├── spi_master.c           # Non-blocking SPI master driver
-│   ├── uart_telemetry.c       # Status print every 500ms
-│   └── exti_handlers.c        # All button/sensor ISRs
-│
-├── 📁 Slave/
-│   ├── main.c                 # Init + FSM loop
-│   ├── fsm_elevator_b.c       # Elevator B state machine
-│   ├── spi_slave.c            # Non-blocking slave (pre-loads TX)
-│   ├── uart_telemetry.c       # Status print every 500ms
-│   └── exti_handlers.c        # Cabin buttons + floor sensors
-│
-└── 📁 Shared/
-    └── spi_protocol.h         # Frame definition + checksum — used by both boards
-```
-
